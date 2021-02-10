@@ -1,0 +1,205 @@
+.header {
+  width: 100%;
+  z-index: 5;
+
+  background-color: $hero-bcg-color;
+
+  @media screen and (max-width: $max-mobile) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main-header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 37px;
+    padding-bottom: 7px;
+  }
+}
+
+.main-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: $font-Titan-One;
+  text-transform: uppercase;
+  @include font-data(25px, $primary-title-color, 400, 1.15, 0.01em);
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    left: -38px;
+  }
+}
+
+.logo-img {
+  margin-right: 18px;
+}
+
+.header-mobile-menu {
+  margin-left: auto;
+  padding: 5px;
+  border: none;
+  background-color: inherit;
+  color: $primary-title-color;
+  z-index: 6;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.menu-container {
+  @media screen and (max-width: $max-tablet) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    width: 250px;
+    height: 100vh;
+
+    text-align: left;
+    background-color: #e17992;
+
+    transform-origin: top right;
+    transform: scale(0, 0);
+    transition: transform 250ms $timing-function;
+
+    &.is-open {
+      transform: scale(1, 1);
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    width: 39%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: relative;
+    z-index: 6;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 18px;
+  right: 23px;
+  fill: $white-color;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.button-buy {
+  display: flex;
+  margin: 60px auto 19px auto;
+
+  @include button(12px, 49px, $white-color, $primary-title-color);
+  @include font-data(16px, $primary-title-color, 500, 1.31);
+
+  transition: background-color 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  .header-button-icon {
+    margin-left: 26px;
+
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    padding: 13px 21px;
+    border-top: 1px solid #e18298;
+    border-bottom: 1px solid #e18298;
+
+    @media screen and (min-width: $desktop) {
+      border: none;
+      padding: 0;
+
+      &:not(:first-child) {
+        margin-left: 36px;
+      }
+    }
+  }
+
+  .link {
+    font-family: $font-DM-Sans;
+    @include font-data(14px, $white-color, 700, 1.31, 0.07em);
+    transition: color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $primary-title-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: inline-block;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    margin-left: 240px;
+
+    @include font-data(16px, $white-color, 700, 1.31, 0.01em);
+  }
+}
+
+.additional-button {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    z-index: 6;
+
+    @include button(10px, 33px, $white-color, $primary-title-color);
+    @include font-data(16px, $primary-title-color, 500, 1.31);
+
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+
+    .header-button-icon {
+      margin-left: 10px;
+
+      fill: currentColor;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 110px;
+  }
+}

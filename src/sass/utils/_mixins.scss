@@ -1,0 +1,33 @@
+@mixin font-data(
+  $size: false,
+  $colour: false,
+  $weight: false,
+  $lh: false,
+  $ls: false
+) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+@mixin button($top-bottom, $left-right, $bgcolor, $text-color) {
+  padding: $top-bottom $left-right;
+  background-color: $bgcolor;
+  color: $text-color;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-family: $font-DM-Sans;
+}

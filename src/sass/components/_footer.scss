@@ -1,0 +1,217 @@
+.footer{
+    background-color: $section-bcg-color;
+    width: 100%;
+}
+
+.footer-main{
+@media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+}
+
+.footer-subtitle{
+    margin-top: 0;
+
+    font-family: $font-Titan-One;
+    text-transform: uppercase;
+    @media screen and (max-width: $max-mobile) {
+    @include font-data(18px,$secondary-title-color, 400, 1.16, 0.04em);
+    margin-bottom: 17px;
+    width: 232px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    @include font-data(26px, $secondary-title-color, 400, 1.15, 0.04em);
+        width: 340px;
+        margin-bottom: 16px;
+    }
+        
+    @media screen and (min-width: $desktop) {
+    @include font-data(30px, $secondary-title-color, 400, 1.14, 0.04em);
+        margin-bottom: 15px;
+    }
+}
+
+.footer-title{
+    margin-top: 0;
+
+    font-family: $font-Titan-One;
+    text-transform: uppercase;
+    @media screen and (max-width: $max-mobile) {
+    @include font-data(34px, $primary-title-color, 400, 1.14, 0.04em);
+    margin-bottom: 43px;
+    width: 200px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $max-tablet) {
+    @include font-data(48px, $primary-title-color, 400, 1.15, 0.04em);
+    margin-bottom: 91px;
+    width: 340px;
+    }
+
+    @media screen and (min-width: $desktop) {
+    @include font-data(58px, $primary-title-color, 400, 1.14, 0.04em);
+    margin-bottom: 97px;
+    }
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+
+    @media screen and (max-width: $max-tablet) {
+        align-items: center;
+        padding-left: 0;
+        padding-top: 0;
+        margin-bottom: 46px;
+    }
+        
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px; 
+    }
+}
+
+.social{
+    @media screen and (max-width: $max-mobile) {
+        padding-top: 0;
+        margin-left: 28px;
+    }
+        
+    @media screen and (min-width: $tablet) {
+        margin-left: 30px; 
+    }
+        
+    @media screen and (min-width: $desktop) {
+        margin-left: 24px;
+    }
+    
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+
+.link-github,
+.link-telegram,
+.link-facebook{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    margin: 0;
+    fill: $white-color;
+    background-color: $secondary-title-color;
+    height: 34px;
+    width: 34px;
+
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    transition: fill 250ms $timing-function,
+    background-color 250ms $timing-function;
+}
+
+.link-github:hover,
+.link-telegram:hover,
+.link-facebook:hover,
+.link-github:focus,
+.link-telegram:focus,
+.link-facebook:focus{
+
+    background-color:$primary-title-color;
+}
+
+
+
+.footer-contacts{
+    @media screen and (max-width: $max-mobile) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 43px;
+    }
+    @media screen and (min-width: $tablet) {
+        
+    }
+}
+
+.footer-invite{
+    font-family: $font-DM-Sans;
+    @media screen and (max-width: $max-mobile) {
+    @include font-data(12px,$primery-text-color, 700, 1.86, 0.04em);
+    margin-right: 4px;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        @include font-data(14px,$primery-text-color, 700, 1.86, 0.04em);
+    margin-right: 4px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include font-data(16px,$primery-text-color, 700, 1.86, 0.04em);
+    margin-right: 4px;
+    }
+}
+
+    .footer-tel{
+    font-family: $font-DM-Sans;
+    @media screen and (max-width: $max-mobile) {
+        @include font-data(12px, $primary-title-color, 700, 1.86, 0.04em);
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include font-data(14px, $primary-title-color, 700, 1.86, 0.04em);
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include font-data(16px, $primary-title-color, 700, 1.86, 0.04em);
+    }
+    }
+
+    .copyright{
+    display: block;
+    border-top: 1px solid $border;
+    font-family: $font-DM-Sans;
+    @media screen and (max-width: $max-mobile) {
+        text-align: center;
+        @include font-data(14px, $secondary-text-color, 700, 1.52, 0.04em);
+        margin: 0;
+        padding-top: 22px;
+        padding-bottom: 25px;
+    }
+    }
+
+    .copyright-text{
+    margin: 0;
+    @media screen and (max-width: $max-mobile) {
+    width: 150px;
+    display: inline-block;
+    }
+    @media screen and (min-width: $tablet) {
+        @include font-data(14px, $secondary-text-color, 700, 1.86, 0.04em);
+        display: flex;
+        justify-content: center;
+        padding-top: 29px;
+        padding-bottom: 18px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 9px;
+        padding-bottom: 10px;
+    }
+    }
+
+    .copyright-link{
+        @media screen and (max-width: $max-mobile) {
+            @include font-data(14px, $secondary-text-color, 700, 1.52, 0.04em);
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include font-data(14px, $secondary-text-color, 700, 1.86, 0.04em);
+    }
+}
